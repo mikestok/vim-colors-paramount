@@ -53,6 +53,7 @@ if &background == "dark"
   let s:bg              = s:black
   let s:bg_subtle       = s:lighter_black
   let s:bg_very_subtle  = s:subtle_black
+  let s:bg_yellow       = s:dark_yellow
   let s:norm            = s:lighter_gray
   let s:norm_subtle     = s:medium_gray
   let s:purple          = s:light_purple
@@ -65,6 +66,7 @@ else
   let s:bg              = s:actual_white
   let s:bg_subtle       = s:light_gray
   let s:bg_very_subtle  = s:lightest_gray
+  let s:bg_yellow       = s:light_yellow
   let s:norm            = s:light_black
   let s:norm_subtle     = s:medium_gray
   let s:purple          = s:dark_purple
@@ -95,7 +97,7 @@ if &background != s:background
 endif
 
 call s:h("Cursor",        {"bg": s:purple, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
+call s:h("Comment",       {"bg": s:bg_yellow, "fg": s:norm, "cterm": "italic", "gui": "italic"})
 
 call s:h("Constant",      {"fg": s:purple})
 hi! link Character        Constant
